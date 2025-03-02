@@ -1,7 +1,4 @@
 import './main.css';
-import DateToNumber from './components/DateToNumber';
-import { List } from './components/List/';
-import { MyTasks } from './components/Task/';
 import { Box, useMediaQuery } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { ruRU } from '@mui/x-data-grid';
@@ -15,10 +12,10 @@ import {
   palletteTheme,
   typographyTheme,
   ColorModeContext,
-} from './types/types';
+} from '../../types/types';
 import 'dayjs/locale/ru';
 
-function main() {
+export default function Main() {
   // В хроме с тёмной темой могут быть проблемы. исправление:
   // DevTools => More Tools => Rendering => спускаемся к Emulate CSS media feature prefers-color-scheme => ставим нужную тему
   const isSystemDark = useMediaQuery('(prefers-color-scheme: dark)');
@@ -59,11 +56,10 @@ function main() {
         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={'ru'}>
           <Box sx={{ minWidth: 'calc(100vw - 48px)' }}>
             <Box sx={{ display: 'none' }}>
-              <List />
-              <DateToNumber />
+              
             </Box>
             <Box sx={{ width: '100%' }}>
-              <MyTasks />
+            
             </Box>
           </Box>
         </LocalizationProvider>
@@ -71,5 +67,3 @@ function main() {
     </ColorModeContext.Provider>
   );
 }
-
-export default main;
