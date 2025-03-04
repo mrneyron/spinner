@@ -14,6 +14,7 @@ export const Spinner = () => {
   const [param] = useLocalStorage<VariantType>('params', variantsBase[0]);
   const [listStorage] = useLocalStorage<ListGifts>('list', []);
   const [opened, setOpened] = useState(-1);
+  const [openAll, setOpenAll] = useState(false);
 
   const [sorted, setSorted] = useState<ListGifts>(listStorage);
 
@@ -77,6 +78,10 @@ export const Spinner = () => {
     console.log('copy', copy);
   };
 
+  const handleOpenAll = () => {
+    setOpenAll(!openAll);
+  };
+
   return (
     <Box sx={{ p: 4 }}>
       <Box>
@@ -92,7 +97,7 @@ export const Spinner = () => {
         }}
       >
         {sorted.map((item, index) => {
-          const isOpen = opened === index + 1;
+          const isOpen = openAll ? openAll : opened === index + 1;
           return (
             <CardForUser
               item={item}
@@ -103,6 +108,17 @@ export const Spinner = () => {
             />
           );
         })}
+      </Box>
+      <Box
+        sx={{
+          mt: 2,
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <Button sx={{ minWidth: '200px' }} onClick={handleOpenAll}>
+          {openAll ? 'Скрыть все' : 'Открыть все'}
+        </Button>
       </Box>
       <div style={{ display: 'none' }}>
         <Button onClick={onClick}>TEST</Button>
