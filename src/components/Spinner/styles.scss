@@ -1,0 +1,215 @@
+$bgcolor: #e9f1df;
+$transparent: rgba(255, 255, 255, 0);
+
+$color-5: #0c3190;
+$color-4: #9968f8;
+$color-3: #fb4eff;
+$color-2: #12e3d9;
+$color-1: #c93c00;
+
+$size: 3em;
+$big-size: $size * 2;
+$min: 0;
+$max: $size * 0.16;
+.MuiBox-root .card {
+  background:
+    linear-gradient(
+        to right top,
+        $transparent $min,
+        $color-5 $min,
+        $color-5 $max,
+        $transparent $max
+      )
+      $size 0,
+    linear-gradient(
+        to left bottom,
+        $transparent $min,
+        $color-5 $min,
+        $color-5 $max,
+        $transparent $max
+      )
+      $size 0,
+    linear-gradient(
+        to right bottom,
+        $transparent $min,
+        $color-5 $min,
+        $color-5 $max,
+        $transparent $max
+      )
+      $size 0,
+    linear-gradient(
+        to left top,
+        $transparent $min,
+        $color-5 $min,
+        $color-5 $max,
+        $transparent $max
+      )
+      $size 0,
+    linear-gradient(
+        to right top,
+        $transparent $min,
+        $color-5 $min,
+        $color-5 $max,
+        $transparent $max
+      )
+      0 $size,
+    linear-gradient(
+        to left bottom,
+        $transparent $min,
+        $color-5 $min,
+        $color-5 $max,
+        $transparent $max
+      )
+      0 $size,
+    linear-gradient(
+        to right bottom,
+        $transparent $min,
+        $color-5 $min,
+        $color-5 $max,
+        $transparent $max
+      )
+      0 $size,
+    linear-gradient(
+        to left top,
+        $transparent $min,
+        $color-5 $min,
+        $color-5 $max,
+        $transparent $max
+      )
+      0 $size,
+    linear-gradient(
+        to right top,
+        $transparent $min,
+        $color-1 $min,
+        $color-1 $max,
+        $color-2 $min * 2,
+        $color-2 $max * 2,
+        $color-3 $min * 3,
+        $color-3 $max * 3,
+        $color-4 $min * 4,
+        $color-4 $max * 4,
+        $color-5 $min * 5,
+        $color-5 $max * 5,
+        $transparent $max
+      )
+      0 0,
+    linear-gradient(
+        to right bottom,
+        $transparent $min,
+        $color-1 $min,
+        $color-1 $max,
+        $color-2 $min * 2,
+        $color-2 $max * 2,
+        $color-3 $min * 3,
+        $color-3 $max * 3,
+        $color-4 $min * 4,
+        $color-4 $max * 4,
+        $color-5 $min * 5,
+        $color-5 $max * 5,
+        $transparent $max
+      )
+      0 0,
+    linear-gradient(
+        to left top,
+        $transparent $min,
+        $color-1 $min,
+        $color-1 $max,
+        $color-2 $min * 2,
+        $color-2 $max * 2,
+        $color-3 $min * 3,
+        $color-3 $max * 3,
+        $color-4 $min * 4,
+        $color-4 $max * 4,
+        $color-5 $min * 5,
+        $color-5 $max * 5,
+        $transparent $max
+      )
+      0 0,
+    linear-gradient(
+        to left bottom,
+        $transparent $min,
+        $color-1 $min,
+        $color-1 $max,
+        $color-2 $min * 2,
+        $color-2 $max * 2,
+        $color-3 $min * 3,
+        $color-3 $max * 3,
+        $color-4 $min * 4,
+        $color-4 $max * 4,
+        $color-5 $min * 5,
+        $color-5 $max * 5,
+        $transparent $max
+      )
+      0 0,
+    linear-gradient(
+        to right top,
+        $transparent $min,
+        $color-1 $min,
+        $color-1 $max,
+        $color-2 $min * 2,
+        $color-2 $max * 2,
+        $color-3 $min * 3,
+        $color-3 $max * 3,
+        $color-4 $min * 4,
+        $color-4 $max * 4,
+        $color-5 $min * 5,
+        $color-5 $max * 5,
+        $transparent $max
+      )
+      $size $size,
+    linear-gradient(
+        to right bottom,
+        $transparent $min,
+        $color-1 $min,
+        $color-1 $max,
+        $color-2 $min * 2,
+        $color-2 $max * 2,
+        $color-3 $min * 3,
+        $color-3 $max * 3,
+        $color-4 $min * 4,
+        $color-4 $max * 4,
+        $color-5 $min * 5,
+        $color-5 $max * 5,
+        $transparent $max
+      )
+      $size $size,
+    linear-gradient(
+        to left top,
+        $transparent $min,
+        $color-1 $min,
+        $color-1 $max,
+        $color-2 $min * 2,
+        $color-2 $max * 2,
+        $color-3 $min * 3,
+        $color-3 $max * 3,
+        $color-4 $min * 4,
+        $color-4 $max * 4,
+        $color-5 $min * 5,
+        $color-5 $max * 5,
+        $transparent $max
+      )
+      $size $size,
+    linear-gradient(
+        to left bottom,
+        $transparent $min,
+        $color-1 $min,
+        $color-1 $max,
+        $color-2 $min * 2,
+        $color-2 $max * 2,
+        $color-3 $min * 3,
+        $color-3 $max * 3,
+        $color-4 $min * 4,
+        $color-4 $max * 4,
+        $color-5 $min * 5,
+        $color-5 $max * 5,
+        $transparent $max
+      )
+      $size $size;
+  background-size: $big-size $big-size;
+  background-color: $bgcolor;
+  background-repeat: repeat;
+  font:
+    16px/2 'Trebuchet MS',
+    Verdana,
+    sans-serif;
+}

@@ -16,6 +16,13 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    optimizeDeps: {
+      include: [
+        '@mui/material/Tooltip',
+        '@emotion/styled',
+        '@emotion/react',
+      ],
+    },
     server: {
       port: 3001,
       proxy: proxyConfigLocal
