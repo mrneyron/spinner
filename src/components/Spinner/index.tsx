@@ -11,14 +11,8 @@ import { useState } from 'react';
 import { shuffle } from './utils.ts';
 
 export const Spinner = () => {
-  const [param] = useLocalStorage<VariantType>(
-    'params',
-    variantsBase[0]
-  );
-  const [listStorage] = useLocalStorage<ListGifts>(
-    'list',
-    []
-  );
+  const [param] = useLocalStorage<VariantType>('params', variantsBase[0]);
+  const [listStorage] = useLocalStorage<ListGifts>('list', []);
   const [opened, setOpened] = useState(-1);
 
   const [sorted, setSorted] = useState<ListGifts>(listStorage);
@@ -98,7 +92,7 @@ export const Spinner = () => {
         }}
       >
         {sorted.map((item, index) => {
-          const isOpen = opened === index + 1 ? true : false;
+          const isOpen = opened === index + 1;
           return (
             <CardForUser
               item={item}
@@ -110,7 +104,9 @@ export const Spinner = () => {
           );
         })}
       </Box>
-      <Button onClick={onClick}>TEST</Button>
+      <div style={{ display: 'none' }}>
+        <Button onClick={onClick}>TEST</Button>
+      </div>
     </Box>
   );
 };

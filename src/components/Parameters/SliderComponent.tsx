@@ -28,8 +28,7 @@ export const SliderComponent = () => {
 
   useEffect(() => {
     if (!number) {
-      const nowParameter = param;
-      setNumber(nowParameter.id);
+      setNumber(param.id);
     }
   }, [number, param]);
 
@@ -41,8 +40,7 @@ export const SliderComponent = () => {
   };
 
   const getText = () => {
-    const nowParameter = param;
-    return nowParameter.name;
+    return param.name;
   };
 
   return (
