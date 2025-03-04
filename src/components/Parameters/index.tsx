@@ -1,4 +1,4 @@
-import { Box, Grid, Divider } from '@mui/material';
+import { Box, Grid, Divider, Button } from '@mui/material';
 import { useLocalStorage } from '../../hooks/useLocalStorage.ts';
 import { SliderComponent } from './SliderComponent.tsx';
 import { ThemeSwitcher } from './ThemeSwitcher.tsx';
@@ -17,7 +17,7 @@ type ParamsComponentProps = {
 
 export const ParamsComponent = (props: ParamsComponentProps) => {
   const [param] = useLocalStorage<VariantType>('params', variantsBase[0]);
-  const [listStorage] = useLocalStorage<ListGifts>('list', []);
+  const [listStorage, , removeList] = useLocalStorage<ListGifts>('list', []);
 
   return (
     <Box sx={{ mt: 4, mb: 4, ml: 5, mr: 5, minWidth: '94.7vw' }}>
@@ -47,6 +47,15 @@ export const ParamsComponent = (props: ParamsComponentProps) => {
             <>
               <DraggableList />
             </>
+          )}
+        </Grid>
+        <Grid item xs={12}>
+          {listStorage.length > 0 && (
+            <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
+              <Button variant={'outlined'} onClick={() => removeList()}>
+                Удалить все карточки
+              </Button>
+            </Box>
           )}
         </Grid>
       </Grid>
