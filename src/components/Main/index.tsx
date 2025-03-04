@@ -15,7 +15,7 @@ import 'dayjs/locale/ru';
 import { ParamsComponent } from '../Parameters';
 import { useLocalStorage } from '../../hooks/useLocalStorageString';
 import { Spinner } from '../Spinner';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router';
 
 export default function Main() {
   // В хроме с тёмной темой могут быть проблемы. исправление:
@@ -70,28 +70,30 @@ export default function Main() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Box>
-          <Router>
-            <div style={{ display: 'none' }}>
-              <nav>
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/params">Params</Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <Routes>
-              <Route
-                path="/params"
-                element={<ParamsComponent colorMode={colorMode} />}
-              />
-              <Route path="/" element={<Spinner />} />
-            </Routes>
-            <Box sx={{ display: 'none' }}></Box>
-          </Router>
+          <div style={{ display: 'none' }}>
+            <nav>
+              <ul>
+                <li>
+                  <NavLink to="/" end>
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/params" end>
+                    Params
+                  </NavLink>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <Routes>
+            <Route index element={<Spinner />} />
+            <Route
+              path="params"
+              element={<ParamsComponent colorMode={colorMode} />}
+            />
+          </Routes>
+          <Box sx={{ display: 'none' }}></Box>
         </Box>
       </ThemeProvider>
     </ColorModeContext.Provider>
