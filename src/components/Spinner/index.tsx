@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from '@mui/material';
 import './styles.scss';
+import './style.css';
 import { useLocalStorage } from '../../hooks/useLocalStorage.ts';
 import { CardForUser } from '../CardForUser';
 import {

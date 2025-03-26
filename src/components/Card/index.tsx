@@ -56,11 +56,11 @@ export const Card = ({
   return (
     <div ref={setNodeRef} style={sx} {...props} {...attributes} {...listeners}>
       <Paper
-        className="card"
+        className="gift"
         elevation={3}
         sx={{
           width: '200px',
-          height: '320px',
+          height: '160px',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -70,8 +70,8 @@ export const Card = ({
         {open ? (
           <Box
             sx={{
-              height: '280px',
-              width: '160px',
+              height: '136px',
+              width: '164px',
               backgroundColor: theme.palette.background.paper,
               borderRadius: '8px',
               display: 'flex',
